@@ -47,14 +47,16 @@ var connection = mysql.createConnection({
   function getCustomerRequest() {
     inquirer.prompt([
         {
-            type: "prompt",
-            message: "Please enter the number of the item you would like to purchase",
+            type: "input",
+            message: "Please enter the number of the item you would like to purchase?",
             name: "product"
+      
         },
         {
-            type: "prompt",
+            type: "input",
             message: "How many of this item would you like to buy?",
             name: "product_quantity"
+      
         }
       ]).then(function(answers) {
 
